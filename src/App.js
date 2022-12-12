@@ -1,12 +1,12 @@
 import Header from "./Header";
 import "./index.css";
-import ListArticles from "./Articles/ListArticles";
+import RandomCocktail from "./Cocktail/RandomCocktail";
 
 function App() {
   return (
     <div>
       <Header />
-      <ListArticles />
+      <RandomCocktail />
     </div>
   );
 }
