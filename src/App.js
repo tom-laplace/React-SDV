@@ -1,14 +1,12 @@
 import Header from "./Header";
-import Article from "./Article";
-import Footer from "./Footer";
 import "./index.css";
+import ListArticles from "./Articles/ListArticles";
 
 function App() {
   return (
     <div>
       <Header />
-      <Article />
-      <Footer />
+      <ListArticles />
     </div>
   );
 }
