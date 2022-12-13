@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import SearchCocktail from "./SearchCocktail";
 import ShowListCocktail from "./ShowListCocktail";
 
 const ListCocktail = () => {
@@ -13,7 +14,7 @@ const ListCocktail = () => {
   }, []); //Tableau vide pour qu'il s'éxécute qu'une seule fois
 
   return(
-    <ShowListCocktail cocktails={cocktailsData} />
+    <><SearchCocktail setCocktailsData={setCocktailsData} /><ShowListCocktail cocktails={cocktailsData} /></>
   )
 
 
