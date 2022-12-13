@@ -22,7 +22,7 @@ const RandomCocktail = () => {
 
   return (
     <div className=" text-center">
-      <button onClick={handleClick} className="border-white border-2 p-2">
+      <button onClick={handleClick} className="text-white bg-gradient-to-r from-red-400 via-red-500 to-red-600 hover:bg-gradient-to-br font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2">
         CockTell me
       </button>
 

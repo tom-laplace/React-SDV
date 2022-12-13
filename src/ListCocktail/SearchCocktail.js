@@ -1,37 +1,27 @@
 import React, { useState } from "react";
 
-const SearchCocktail = ({setCocktailsData}) => {
-  const [search, setSearch] = useState("");
-
+const SearchCocktail = ({ setCocktailsData }) => {
   const handleChange = (event) => {
-    setSearch(event.target.value);
-  };
-
-  const handleSubmit = (event) => {
     event.preventDefault();
-    fetch(`https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${search}`)
+    fetch(
+      `https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${event.target.value}`
+    )
       .then((response) => response.json())
       .then((data) => {
-        setCocktailsData(data.drinks);
+        data.drinks === null ? setCocktailsData([]) : setCocktailsData(data.drinks);
       });
   };
 
   return (
     <div className="flex justify-center">
-      <form onSubmit={handleSubmit} className="mx-auto flex-col flex">
+      <form className="mx-auto flex-col flex">
         <input
           type="text"
           placeholder="Search a cocktail"
           className="border-2 border-black rounded-md p-2 m-2"
-          value={search}
+          name="search"
           onChange={handleChange}
         />
-        <button
-          type="submit"
-          className="border-2 border-black rounded-md p-2 m-2"
-        >
-          Search
-        </button>
       </form>
     </div>
   );

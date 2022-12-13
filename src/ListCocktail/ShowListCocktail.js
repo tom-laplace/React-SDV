@@ -1,7 +1,7 @@
 const ShowListCocktail = ({ cocktails }) => {
   return (
     <div className="container mx-auto">
-      <div className="grid grid-cols-3 gap-5">
+      <div className="grid grid-cols-3 gap-3">
         {cocktails.map((cocktail) => (
           <div className="border-2 border-white rounded-lg p-4">
             <h2 className="font-bold">{cocktail.strDrink}</h2>
