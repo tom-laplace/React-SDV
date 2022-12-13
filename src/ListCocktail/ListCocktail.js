@@ -13,11 +13,12 @@ const ListCocktail = () => {
       });
   }, []); //Tableau vide pour qu'il s'éxécute qu'une seule fois
 
-  return(
-    <><SearchCocktail setCocktailsData={setCocktailsData} /><ShowListCocktail cocktails={cocktailsData} /></>
-  )
-
-
+  return (
+    <>
+      <SearchCocktail setCocktailsData={setCocktailsData} />
+      <ShowListCocktail cocktails={cocktailsData} />
+    </>
+  );
 };
 
 export default ListCocktail;
