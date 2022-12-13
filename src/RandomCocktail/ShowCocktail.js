@@ -20,14 +20,14 @@ const ShowCocktail = (props) => {
         alt="Un cocktail"
         className="mx-auto w-64 border-2 border-white rounded-full"
       />
-      <h3 className="font-bold">Instructions</h3>
-      <p>{cocktailData.strInstructions}</p>
       <h3 className="font-bold">Ingrédients</h3>
       <ul>
         {getIngredients().map((ingredient) => (
           <li>{ingredient}</li>
         ))}
       </ul>
+      <h3 className="font-bold">Instructions</h3>
+      <p>{cocktailData.strInstructions}</p>
     </div>
   );
 };
