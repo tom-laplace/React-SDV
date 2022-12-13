@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import ShowCocktail from "./ShowCocktail";
 
 const RandomCocktail = () => {
   const [cocktailRandomData, setCocktailRandomData] = useState(null);
@@ -25,20 +26,7 @@ const RandomCocktail = () => {
         CockTell me
       </button>
 
-      {cocktailRandomData !== null ? (
-        <div className="mt-4">
-          <h2>{cocktailRandomData.drinks[0].strDrink}</h2>
-          <img
-            src={cocktailRandomData.drinks[0].strDrinkThumb}
-            alt="Un cocktail"
-            className="mx-auto w-60 border-2 border-white rounded-full"
-          />
-        </div>
-      ) : (
-        <div>
-          <h2>Ca charge</h2>
-        </div>
-      )}
+      {cocktailRandomData && <ShowCocktail cocktail={cocktailRandomData} />}
     </div>
   );
 };
